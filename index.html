@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Variable</h1>
+
+    <p id="prueba"> Ejemplos JS Assignment </p>
+
+    <hr>
+
+    <h1>Ejercicio 2</h1>
+
+    <p id="prueba1"> Ejemplos JS Assignment con datos </p>
+
+    <hr>
+
+    <h1> Funciones </h1>
+    <h2>El resultado de la suma  es: </h2>
+
+    <p id="funcion">  </p>
+
+    <hr>
+
+    <h1> JS Objectos </h1>
+    
+    <p id="example">  </p>
+
+    <hr>
+
+    <h1> JS Array </h1>
+    
+    <p id="matriz">  </p>
+
+    <hr>
+
+    <h1> JS Bucle For </h1>
+        
+    <p id="bucle">  </p>
+
+    <hr>
+
+    <h1>JS Arrays - push </h1>
+
+    <button onclick="insertar()"> Agregar </button>
+
+    <p id="elemento"></p>
+
+    <hr>
+
+    <h1>JS Comparisons </h1>
+
+    <p>Ingresa aqui tu nota final</p>
+
+    <input id="eval" value="" />
+        <button onclick="validar()"> Evaluar </button>
+        <p id="valoracion"></p>
+
+
+
+<script>
+ 
+ //Codigo asignación //
+    var a = 20;
+    a*=5;
+    document.getElementById("prueba").innerHTML = a;
+
+//Codigo asiganción con datos
+
+    var profesor = {
+        nombre:"Andrés",
+        apellido:"Vargas",
+        materia: "Matemáticas"
+        };
+    
+    document.getElementById("prueba1").innerHTML = profesor.nombre + profesor.apellido + " es de " + profesor.materia
+    
+
+//Codigo funciones
+
+        var a = 14
+        var b = 20
+
+        var resultado= a + b
+
+    function operacion() {
+        return a + b;
+    }
+
+    document.getElementById("funcion").innerHTML = operacion();
+
+    //alert( "El resultado es:" + resultado)
+
+
+//Codigo objeto
+
+    var grado = { curso:801, director: "Jorge Guerrero" };
+    document.getElementById("example").innerHTML = "El curso " + grado.curso  + " tiene como director a " + grado.director ;
+
+    
+//Codigo matriz
+
+    var colors = ["Azul","Verde","Morado","Gris"];
+        colors[2] = "Amarillo" ;
+        document.getElementById("matriz").innerHTML = colors
+
+//Codigo bucle for
+
+    var animals ,text, limite, x;
+
+        animals = [ "León", "Tigre","Guepardo","Lobo","Zorro","Pantera","Jaguar" ];
+        limite = animals.length
+
+        text = "<ul>" ;
+
+    for (x= 0; x < limite; x++) {
+         text += "<li>" + animals[x] + "<li>";
+    
+    }
+
+    text += "</ul>";
+
+    document.getElementById("bucle").innerHTML = text;
+
+    //Codigo array - push
+
+    var paises = ["España","Argentina","Chile","Colombia","Peru","Ecuador","Francia","Rusia"];
+    
+    document.getElementById("elemento").innerHTML = paises;
+
+
+    function insertar() {
+        paises.push("Londres","Uruguay");
+        document.getElementById("elemento").innerHTML = paises;
+        }
+
+    //Codigo JS Comparisons
+
+    function validar() {
+        var nota, eleccion ;
+        nota= Number(document.getElementById("eval").value);
+
+    if (isNaN(nota)) {
+        eleccion="Esto no es un dato númerico, ingresa un número de 1 a 5";
+    } else { eleccion=( nota < 3) ? "Debes repetir la asignatura" : "Aprobaste";
+        }
+       document.getElementById("valoracion").innerHTML= eleccion;
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
+</script>
+
+
+    
+</body>
+</html>
