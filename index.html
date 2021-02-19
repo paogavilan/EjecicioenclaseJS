@@ -8,18 +8,21 @@
 </head>
 <body>
 
-    <h1>Variable</h1>
+    <!--JS Assignment-->
+    <h1>JS Assignment</h1>
 
-    <p id="prueba"> Ejemplos JS Assignment </p>
-
-    <hr>
-
-    <h1>Ejercicio 2</h1>
-
-    <p id="prueba1"> Ejemplos JS Assignment con datos </p>
+    <p id="prueba"> Ejemplo </p>
 
     <hr>
 
+    <!--JS Assigment condatos-->
+    <h1>JS Assignment con datos</h1>
+
+    <p id="prueba1">  </p>
+
+    <hr>
+
+    <!--JS Funciones-->
     <h1> Funciones </h1>
     <h2>El resultado de la suma  es: </h2>
 
@@ -27,24 +30,28 @@
 
     <hr>
 
+    <!--JS Objectos-->
     <h1> JS Objectos </h1>
     
     <p id="example">  </p>
 
     <hr>
 
+    <!--JS JS Array-->
     <h1> JS Array </h1>
     
     <p id="matriz">  </p>
 
     <hr>
 
-    <h1> JS Bucle For </h1>
+    <!--JS For-->
+    <h1> JS  For </h1>
         
     <p id="bucle">  </p>
 
     <hr>
 
+    <!--JS JS Arrays - push-->
     <h1>JS Arrays - push </h1>
 
     <button onclick="insertar()"> Agregar </button>
@@ -52,7 +59,7 @@
     <p id="elemento"></p>
 
     <hr>
-
+    <!--JS Comparisons-->
     <h1>JS Comparisons </h1>
 
     <p>Ingresa aqui tu nota final</p>
@@ -61,7 +68,47 @@
         <button onclick="validar()"> Evaluar </button>
         <p id="valoracion"></p>
 
+   <br>
+   
+   <!--JS Switch Statement-->
+   <h1>JS Switch Statement </h1>
 
+   <p id="cond"></p>
+
+   <br>
+
+   <!--JS While Loop-->
+
+   <h1>JS Switch Statement </h1>
+
+   <p id="flores"></p>
+
+   <br>
+
+   <!--JS Break-->
+   
+   <h1>JS Break </h1>
+
+   <p id="clave"></p>
+
+   <br>
+
+   <!--JS DOM Elements-->
+   
+   <h1>JS  DOM Elements </h1>
+
+   <p><b>Bienvendios a Codigo maestro</b></p>
+   
+   <p>Empresa dedicada al desarrollo y diseño de páginas web.</p>
+   <p>Hoy queremos presentarles nuestro proyecto más significativo : </p><b>"WORLDTRONIC</b>
+
+
+   <p id="word"></p>
+
+
+
+
+   
 
 <script>
  
@@ -127,7 +174,7 @@
 
     document.getElementById("bucle").innerHTML = text;
 
-    //Codigo array - push
+//Codigo array - push
 
     var paises = ["España","Argentina","Chile","Colombia","Peru","Ecuador","Francia","Rusia"];
     
@@ -139,7 +186,7 @@
         document.getElementById("elemento").innerHTML = paises;
         }
 
-    //Codigo JS Comparisons
+//Codigo JS Comparisons
 
     function validar() {
         var nota, eleccion ;
@@ -151,6 +198,65 @@
         }
        document.getElementById("valoracion").innerHTML= eleccion;
     }
+
+//Codigo JS Switch 
+
+    var opc= prompt("Escribe un número del 1 a 3 para conocer tu premio" )
+
+    switch (opc) {
+        case "1":
+        opc = "Felicitaciones, ganaste unna beca ";
+        break;
+        case "2":
+        opc = " Feliciatciones, ganaste una casa";
+        break;
+        case "3":
+        opc = "Lo sentimos, no tienes premio";
+        break;
+        default:
+        alert("No es una opción válida")
+        
+    }
+
+    document.getElementById("cond").innerHTML = " Tu premio en el día de hoy es : " + opc;
+
+
+//Codigo JS Loop While
+
+    var flower =["Rosa","Margarita","Girasol","Orquídea","Cartucho","Tulipán"]
+
+    var b = 0;
+    var text= " ";
+
+    while (flower[b] ) {
+        text += flower[b] + "<br>";
+        b++;
+    }
+
+    document.getElementById("flores").innerHTML = text ;
+
+
+//Codigo JS Break
+
+    var felino = ["León", "Pantera", "Tigre", "Guepardo"];
+    var inf = " ";
+
+    list: {
+        inf += felino[0] + "<br>"; 
+        inf += felino[1] + "<br>"; 
+        break list;
+        inf += felino[2] + "<br>"; 
+        inf += felino[3] + "<br>"; 
+    }
+
+    document.getElementById("clave").innerHTML = inf;
+
+//Codigo DOM Elements 
+
+    var w = document.getElementsByTagName("p");
+    document.getElementById("word").innerHTML = 'El texto del (index 0) es' + w[1].innerHTML;
+
+
 
 </script>
 
